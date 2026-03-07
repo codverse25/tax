@@ -7,6 +7,7 @@ const navLinks = [
   { href: "#templates", label: "Template" },
   { href: "#preview", label: "Preview" },
   { href: "#panduan", label: "Panduan" },
+  { href: "#feedback", label: "Feedback" },
 ];
 
 const sectionIds = navLinks.map((l) => l.href.replace("#", ""));
