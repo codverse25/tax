@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-// import previewCover from "/preview";
-// import previewToc from "/preview";
-// import previewChapter from "/preview";
-
-const img = "https://placehold.co/600x400";
+import previewCover from "/preview/sampul.png";
+import PreviewToc from "/preview/pengesahan.png";
+import PreviewChapter from "/preview/pengantar.png";
+import DaftarIsi from "/preview/daftarisi.png";
 
 const slides = [
-  { src: img, label: "Halaman Cover" },
-  { src: img, label: "Daftar Isi" },
-  { src: img, label: "Isi Bab" },
+  { src: previewCover, label: "Halaman Cover" },
+  { src: PreviewToc, label: "Lembar Pengesahan" },
+  { src: PreviewChapter, label: "Kata Pengantar" },
+  { src: DaftarIsi, label: "Daftar Isi" },
 ];
 
 const PreviewSection = () => {

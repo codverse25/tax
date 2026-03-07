@@ -1,4 +1,5 @@
-import { Download, Github, Clock, FileText, GraduationCap } from "lucide-react";
+import { Link } from "react-router";
+import { Download, Github, Clock, FileText, GraduationCap, BookOpen } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { Badge } from "~/components/ui/badge";
 
@@ -43,11 +44,10 @@ const TemplatesSection = () => {
           {templates.map((t) => (
             <div
               key={t.title}
-              className={`rounded-xl border bg-card p-8 space-y-5 transition-all ${
-                t.status === "available"
-                  ? "border-primary/30 glow-soft"
-                  : "border-border opacity-75"
-              }`}
+              className={`rounded-xl border bg-card p-8 space-y-5 transition-all ${t.status === "available"
+                ? "border-primary/30 glow-soft"
+                : "border-border opacity-75"
+                }`}
             >
               <div className="flex items-start justify-between">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
@@ -84,27 +84,38 @@ const TemplatesSection = () => {
               </div>
 
               {t.status === "available" ? (
-                <div className="flex gap-3 pt-2">
-                  <a
-                    href={t.downloadUrl!}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <div className="space-y-3 pt-2">
+                  <div className="flex gap-3">
+                    <a
+                      href={t.downloadUrl!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="hero" size="sm" className="gap-2">
+                        <Download className="h-3.5 w-3.5" />
+                        Download
+                      </Button>
+                    </a>
+                    <a
+                      href={t.repoUrl!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="heroOutline" size="sm" className="gap-2">
+                        <Github className="h-3.5 w-3.5" />
+                        GitHub
+                      </Button>
+                    </a>
+                  </div>
+                  <Link
+                    to="/panduan/install"
+                    className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors group"
                   >
-                    <Button variant="hero" size="sm" className="gap-2">
-                      <Download className="h-3.5 w-3.5" />
-                      Download
-                    </Button>
-                  </a>
-                  <a
-                    href={t.repoUrl!}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button variant="heroOutline" size="sm" className="gap-2">
-                      <Github className="h-3.5 w-3.5" />
-                      GitHub
-                    </Button>
-                  </a>
+                    <BookOpen className="h-3.5 w-3.5 group-hover:text-primary transition-colors" />
+                    <span className="underline underline-offset-2 decoration-dashed">
+                      Cara Penggunaan
+                    </span>
+                  </Link>
                 </div>
               ) : (
                 <div className="pt-2">
