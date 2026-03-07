@@ -6,17 +6,19 @@ const Footer = () => {
       <div className="mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-muted-foreground">
           <Zap className="h-4 w-4 text-primary" />
-          <span className="text-sm">TAX — Template Academic Xpress UNIRA</span>
+          <span className="text-sm">
+            {new Date().getFullYear()} TAX — Template Academic Xpress UNIRA
+          </span>
         </div>
         <p className="text-xs text-muted-foreground">
           Dibuat oleh{" "}
           <a
-            href="https://github.com/CodeCampUnira"
+            href="https://dcnunira.dev"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline"
           >
-            CodeCampUnira
+            DCN UNIRA
           </a>
         </p>
       </div>

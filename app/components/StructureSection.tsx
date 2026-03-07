@@ -64,7 +64,7 @@ const StructureSection = () => {
               ) : (
                 <FileText className="h-4 w-4 text-muted-foreground ml-4" />
               )}
-              <span className="text-sm font-mono text-foreground min-w-[220px]">
+              <span className="text-sm font-mono text-foreground min-w-55">
                 {f.name}
               </span>
               <span className="text-xs text-muted-foreground">{f.desc}</span>

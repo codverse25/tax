@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "~/components/ui/button";
 import { ArrowDown, Github } from "lucide-react";
 
 const HeroSection = () => {
@@ -8,7 +8,7 @@ const HeroSection = () => {
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            by CodeCampUnira
+            by DCN UNIRA
           </div>
 
           <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
@@ -21,8 +21,8 @@ const HeroSection = () => {
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Koleksi template LaTeX akademik untuk mahasiswa Teknik Informatika
-            Universitas Madura — mulai dari laporan Kerja Praktik hingga
-            Skripsi, siap pakai dan sesuai format resmi.
+            Universitas Madura. Mulai dari laporan Kerja Praktik hingga Skripsi,
+            siap pakai dan sesuai format resmi.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
