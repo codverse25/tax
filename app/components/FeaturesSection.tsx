@@ -27,12 +27,12 @@ const features = [
   {
     icon: Settings,
     title: "Compile Otomatis",
-    desc: "Script compile untuk build PDF dengan satu perintah — tanpa konfigurasi rumit.",
+    desc: "Script compile untuk build PDF dengan satu perintah tanpa konfigurasi rumit.",
   },
   {
     icon: Zap,
     title: "Cepat & Efisien",
-    desc: "Langsung fokus menulis konten tanpa pusing format — template mengurus sisanya.",
+    desc: "Langsung fokus menulis konten tanpa pusing format template mengurus sisanya.",
   },
   {
     icon: BookOpen,
@@ -50,8 +50,8 @@ const FeaturesSection = () => {
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl font-bold text-foreground">Kenapa TAX?</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Dirancang khusus untuk mahasiswa TI UNIRA agar fokus menulis konten,
-            bukan format.
+            Dirancang khusus untuk mahasiswa Informatika UNIRA agar fokus
+            menulis konten, bukan format.
           </p>
         </div>
 

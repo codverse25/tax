@@ -46,7 +46,10 @@ const GuideSection = () => {
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
-    <section id="panduan" className="py-16 sm:py-24 px-4 sm:px-6 border-t border-border">
+    <section
+      id="panduan"
+      className="py-16 sm:py-24 px-4 sm:px-6 border-t border-border"
+    >
       <div className="mx-auto max-w-4xl">
         <div className="text-center mb-10 sm:mb-16 space-y-3 sm:space-y-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -60,7 +63,7 @@ const GuideSection = () => {
         <div ref={ref} className="relative space-y-6 sm:space-y-8">
           {/* Vertical connector line */}
           <div
-            className="absolute left-5 sm:left-6 top-10 bottom-10 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent"
+            className="absolute left-5 sm:left-6 top-10 bottom-10 w-px bg-linear-to-b from-primary/40 via-primary/20 to-transparent"
             aria-hidden="true"
           />
 

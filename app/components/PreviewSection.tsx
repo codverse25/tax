@@ -32,7 +32,7 @@ const PreviewSection = () => {
       if (e.key === "ArrowLeft") prev();
       if (e.key === "ArrowRight") next();
     },
-    [prev, next]
+    [prev, next],
   );
 
   return (
@@ -55,12 +55,12 @@ const PreviewSection = () => {
             aria-label="Carousel preview dokumen"
             role="region"
           >
-            <div className="flex items-center justify-center p-6 md:p-10 min-h-[31.25rem]">
+            <div className="flex items-center justify-center p-6 md:p-10 min-h-125">
               <img
                 key={current}
                 src={slides[current].src}
                 alt={slides[current].label}
-                className="max-h-[30rem] w-auto rounded-lg shadow-2xl object-contain"
+                className="max-h-120 w-auto rounded-lg shadow-2xl object-contain"
                 style={{ animation: "fade-in 0.3s ease forwards" }}
               />
             </div>
@@ -93,10 +93,11 @@ const PreviewSection = () => {
                   key={i}
                   onClick={() => setCurrent(i)}
                   aria-label={`Slide ${i + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${i === current
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    i === current
                       ? "w-8 bg-primary"
                       : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    }`}
+                  }`}
                 />
               ))}
             </div>

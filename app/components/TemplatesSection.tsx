@@ -1,5 +1,12 @@
 import { Link } from "react-router";
-import { Download, Github, Clock, FileText, GraduationCap, BookOpen } from "lucide-react";
+import {
+  Download,
+  Github,
+  Clock,
+  FileText,
+  GraduationCap,
+  BookOpen,
+} from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { Badge } from "~/components/ui/badge";
 import { useInView } from "~/lib/use-in-view";
@@ -8,7 +15,7 @@ const templates = [
   {
     icon: FileText,
     title: "Laporan Kerja Praktik",
-    desc: "Template lengkap laporan KP untuk mahasiswa Teknik Informatika UNIRA. Sesuai format resmi dengan struktur modular.",
+    desc: "Template lengkap laporan KP untuk mahasiswa Informatika UNIRA. Sesuai format resmi dengan struktur modular.",
     tags: ["LaTeX", "KP", "TI UNIRA"],
     status: "available" as const,
     repoUrl:
@@ -19,7 +26,7 @@ const templates = [
   {
     icon: GraduationCap,
     title: "Laporan Skripsi",
-    desc: "Template laporan skripsi untuk mahasiswa Teknik Informatika UNIRA. Sedang dalam pengembangan oleh tim CodeCampUnira.",
+    desc: "Template laporan skripsi untuk mahasiswa Informatika UNIRA. Sedang dalam pengembangan oleh tim DCN UNIRA.",
     tags: ["LaTeX", "Skripsi", "TI UNIRA"],
     status: "coming_soon" as const,
     repoUrl: null,
@@ -38,8 +45,8 @@ const TemplatesSection = () => {
             Template Tersedia
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Koleksi template LaTeX resmi untuk mahasiswa Teknik Informatika
-            Universitas Madura.
+            Koleksi template LaTeX resmi untuk mahasiswa Informatika Universitas
+            Madura.
           </p>
         </div>
 
@@ -48,9 +55,10 @@ const TemplatesSection = () => {
             <div
               key={t.title}
               className={`rounded-xl border bg-card p-8 space-y-5 transition-all duration-300
-                hover:-translate-y-1.5 hover:shadow-xl ${t.status === "available"
-                  ? "border-primary/30 glow-soft hover:border-primary/50 hover:shadow-primary/10"
-                  : "border-border opacity-75 hover:opacity-90"
+                hover:-translate-y-1.5 hover:shadow-xl ${
+                  t.status === "available"
+                    ? "border-primary/30 glow-soft hover:border-primary/50 hover:shadow-primary/10"
+                    : "border-border opacity-75 hover:opacity-90"
                 }`}
               style={{
                 opacity: inView ? (t.status === "available" ? 1 : 0.75) : 0,
@@ -65,7 +73,9 @@ const TemplatesSection = () => {
                 {t.status === "available" ? (
                   <Badge
                     className="bg-primary/15 text-primary border-primary/30 hover:bg-primary/20"
-                    style={{ animation: "badge-pulse 2.5s ease-in-out infinite" }}
+                    style={{
+                      animation: "badge-pulse 2.5s ease-in-out infinite",
+                    }}
                   >
                     Tersedia
                   </Badge>

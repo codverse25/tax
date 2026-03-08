@@ -83,7 +83,7 @@ const HeroSection = () => {
             className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed opacity-0"
             style={{ animation: "fade-in-up 0.7s ease forwards 0.4s" }}
           >
-            Koleksi template LaTeX akademik untuk mahasiswa Teknik Informatika
+            Koleksi template LaTeX akademik untuk mahasiswa Informatika
             Universitas Madura. Mulai dari laporan Kerja Praktik hingga Skripsi,
             siap pakai dan sesuai format resmi.
           </p>

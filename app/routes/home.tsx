@@ -1,19 +1,24 @@
 import type { Route } from "./+types/home";
 import Welcome from "../welcome/welcome";
 
-export function meta({ }: Route.MetaArgs) {
+export function meta({}: Route.MetaArgs) {
   const title = "TAX - Template Academic Xpress";
-  const description = "Platform template akademik modern untuk mahasiswa UNIRA. Buat laporan, proposal, dan dokumen akademik dengan cepat menggunakan template profesional yang telah terverifikasi.";
+  const description =
+    "Platform template akademik modern untuk mahasiswa Informatika UNIRA. Buat laporan, proposal, dan dokumen akademik dengan cepat menggunakan template profesional yang telah terverifikasi.";
   const url = "https://tax.dcnunira.dev";
   const image = "https://tax.dcnunira.dev/og-image.png";
 
   return [
     { title },
     { name: "description", content: description },
-    { name: "keywords", content: "template akademik, UNIRA, laporan, proposal, mahasiswa, akademik, dokumen, TAX, CodeCamp, template laporan, template proposal" },
+    {
+      name: "keywords",
+      content:
+        "template akademik, UNIRA, laporan, proposal, mahasiswa, akademik, dokumen, TAX, CodeCamp, template laporan, template proposal,DCN UNIRA,dcn unira",
+    },
     { name: "author", content: "Team DCN UNIRA" },
     { name: "robots", content: "index, follow" },
-    { name: "theme-color", content: "#8b5cf6" },
+    { name: "theme-color", content: "#170b32" },
 
     { tagName: "link", rel: "canonical", href: url },
 
@@ -35,7 +40,10 @@ export function meta({ }: Route.MetaArgs) {
     { name: "twitter:creator", content: "@dcn.unira" },
 
     { name: "apple-mobile-web-app-capable", content: "yes" },
-    { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
+    {
+      name: "apple-mobile-web-app-status-bar-style",
+      content: "black-translucent",
+    },
     { name: "apple-mobile-web-app-title", content: "TAX" },
     { name: "msapplication-TileColor", content: "#8b5cf6" },
   ];
